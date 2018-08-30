@@ -1,0 +1,73 @@
+AllCops:
+  Exclude:
+    - tmp/**/*
+    - vendor/**/*
+    - example/vendor/**/*
+  TargetRubyVersion: 2.2
+  DisplayCopNames: true
+
+# use method chain ( avoid use `end.compact` )
+#
+#   hoge.map { |item|
+#     item.piyo
+#   }.compact
+Style/BlockDelimiters:
+  Enabled: false
+
+# no document
+Style/Documentation:
+  Enabled: false
+
+# use `!!hoge`
+Style/DoubleNegation:
+  Enabled: false
+
+# empty case is useful
+#
+#  case
+#  when user.admin?
+#    ...
+#  when user.active?
+#    ...
+#  else
+#    ...
+#  end
+Style/EmptyCaseCondition:
+  Enabled: false
+
+# my preference :)
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+# use `-> {}` syntax
+Style/Lambda:
+  Enabled: false
+
+# see Style/BlockDelimiters
+Style/MultilineBlockChain:
+  Enabled: false
+
+# I feel `.zero?` difficult to understand...
+Style/NumericPredicate:
+  Enabled: false
+
+# useful :)
+Style/Semicolon:
+  Exclude:
+    - spec/**/*
+
+# %w[a b c] or %i[a b c] ?
+Style/SymbolArray:
+  Enabled: false
+
+# incompatible DSL
+Layout/EmptyLinesAroundArguments:
+  Enabled: false
+
+# incompatible DSL
+Metrics/BlockLength:
+  Enabled: false
+
+# my preference :)
+Metrics/LineLength:
+  Max: 120
